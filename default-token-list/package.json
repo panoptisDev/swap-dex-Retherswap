@@ -1,0 +1,40 @@
+{
+  "name": "@retherswap/default-token-list",
+  "version": "1.0.3",
+  "description": "The Retherswap default token list",
+  "main": "build/retherswap-default.tokenlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir -p build && node src/write.js > build/retherswap-default.tokenlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/retherswap-default.tokenlist.json",
+    "tokens",
+    "supported_chains"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Retherswap/default-token-list.git"
+  },
+  "keywords": [
+    "retherswap",
+    "default",
+    "token",
+    "list"
+  ],
+  "author": "Yoshiki",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Retherswap/default-token-list/issues"
+  },
+  "homepage": "https://github.com/Retherswap/default-token-list#readme",
+  "devDependencies": {
+    "@ethersproject/address": "5.0.2",
+    "@retherswap/token-lists": "^1.0.1",
+    "ajv": "6.12.3",
+    "chai": "4.2.0",
+    "mocha": "8.0.1",
+    "rimraf": "3.0.2"
+  }
+}
